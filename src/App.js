@@ -1,22 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import ResponsiveAppBar from './navbar';
+import { Box } from '@mui/material';
+import background from './algae.png'
 function App() {
+
+  const styles = {
+    paperContainer: {
+        height: 1356,
+        backgroundImage: `url(${"algae.png"})`
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="App" style = {{backgroundImage:"./algae.png"}}>
+
+
+      <ResponsiveAppBar></ResponsiveAppBar>
+      <header   style={{
+    backgroundImage: `url(${background})`,
+    backgroundSize: "cover",
+   // height: "100vh",
+    color: "#f5f5f5"
+}} className="App-header">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Brought to you by our wonderful researcher Joelle Harrison
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
