@@ -1,35 +1,31 @@
 
-import './App.css';
-import ResponsiveAppBar from './navbar';
-import turtle from './turtle.jpg'
-import Paper from '@mui/material/Paper';
-import algaeHeader from "./algaeheader.png"
-import { Grid } from '@mui/material';
 
-import ContactUs from './contactus';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './pages/Layout';
+import AboutUs from "./pages/AboutUs.js";
+import Mission from './pages/Mission';
+import Solution from './pages/Solution';
+import Methods from './pages/Methods';
+import Sustainability from './pages/Sustainability';
+import Team from './pages/Team';
+
 function App() {
 
   return (
-    <div className="App" >
-      <div  style={{backgroundColor: "#f7e2ba",backgroundSize: "cover"}}>
-      <ResponsiveAppBar position = "fixed"></ResponsiveAppBar>
-      <img src = {algaeHeader} width={"100%"} height = {"auto"}></img>
+    <div className="App" style={{ backgroundColor: "#f7e2ba", backgroundSize: "cover" }} >
 
-<div style={{height:"20px"}}></div>
-      <Grid container spacing={2}>
-        <Grid item xs={8}>
-          <div style={{padding:"20px"}}><h1 className="pageHeader" style={{opacity:"1"}}>About us</h1>
-      <p className="pageText" style = {{textAlign:"left",opacity:"1"}}>Welcome to Recycalgal, where innovation meets environmental stewardship. We are a forward-thinking company dedicated to revolutionizing the fight against plastic pollution through cutting-edge genetic engineering of algae. </p>
-     </div>
-        
-  </Grid>
-  <Grid item xs={4}>
-  <img width="95%" src={turtle}></img>
-  </Grid>
-</Grid>  
-      </div>
-      
-<ContactUs></ContactUs>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<AboutUs />} />
+            <Route path="mission" element={<Mission />} />
+          <Route path="solution" element={<Solution />} />
+          <Route path="methods" element={<Methods/>} />
+          <Route path="sustainability" element={<Sustainability />} />
+          <Route path="team" element={<Team />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -9,10 +9,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { Link, useNavigate } from 'react-router-dom';
 import AdbIcon from '@mui/icons-material/Adb';
-import logo from './logo800.png';
-const pages = ['About us', 'Our mission', 'Our solution', 'Methods', "Sustainability", "Meet the team"];
+import logo from './../assets/logo800.png';
 
+const ext = [["About us","/"],["Our mission","/mission"],["Our solution","/solution"],["Methods","/methods"],["Sustainability","/sustainability"],["Meet the team","/team"]]
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -20,7 +21,7 @@ function ResponsiveAppBar() {
     setAnchorElNav(event.currentTarget);
   };
 
-
+  const navigate = useNavigate();
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -28,7 +29,7 @@ function ResponsiveAppBar() {
 
 
   return (
-    <AppBar style={{ background: '#FFFFFF', color: "black" }} position="static">
+    <AppBar style={{ background: '#FFFFFF', color: "black" }} position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src={logo} style={{ maxWidth: "60px", maxHeight: "60px", paddingRight:"30px" }} className="App-logo" alt="logo" />
@@ -79,9 +80,9 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {ext.map((page) => (
+                <MenuItem key={page[0]} onClick={()=>{navigate(page[1])}}>
+                  <Typography textAlign="center">{page[0]}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -105,13 +106,13 @@ function ResponsiveAppBar() {
             RecycAlgal
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {ext.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page[0]}
+                onClick={()=>{navigate(page[1])}}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
-                {page}
+                {page[0]}
               </Button>
             ))}
           </Box>
