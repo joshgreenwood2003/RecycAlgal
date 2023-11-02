@@ -20,6 +20,14 @@
   color: white;
 }
 
+
+.pageHeader{
+  font-family:"Rubik";font-size: "xx-large";color:"blue"
+}
+.pageText{
+  font-family: "Rubik";font-size:"small"
+}
+
 .App-link {
   color: #61dafb;
 }

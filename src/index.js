@@ -5,16 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material';
-const dark = createTheme({
+const light = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
   },
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={light}>
     <App />
     </ThemeProvider>
 

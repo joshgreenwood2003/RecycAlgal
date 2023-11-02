@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from './logo800.png';
-const pages = ['About us','Contact us','Our mission','Methods'];
+const pages = ['About us', 'Our mission', 'Our solution', 'Methods', "Sustainability", "Meet the team"];
 
 
 function ResponsiveAppBar() {
@@ -28,10 +28,10 @@ function ResponsiveAppBar() {
 
 
   return (
-    <AppBar color="primary" position="static">
+    <AppBar style={{ background: '#FFFFFF', color: "black" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <img src={logo} style = {{maxWidth:"60px",maxHeight:"60px"}} className="App-logo" alt="logo" />
+          <img src={logo} style={{ maxWidth: "60px", maxHeight: "60px", paddingRight:"30px" }} className="App-logo" alt="logo" />
           <Typography
             variant="h6"
             noWrap
@@ -86,7 +86,6 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -110,7 +109,7 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
               </Button>
