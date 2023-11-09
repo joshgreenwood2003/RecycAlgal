@@ -11,7 +11,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 function ContactUs() {
 
   return (
-    <div style={{ backgroundColor: "#cccccc", width: "100%", textAlign: "left" }}>
+    <div style={{ backgroundColor: "#ffffff", width: "100%", textAlign: "left" }}>
       <p style={{ paddingLeft: "20px",paddingTop:"20px", fontSize: "20px" }}>Contact us</p>
       <List >
         <ListItem>

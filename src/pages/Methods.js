@@ -4,7 +4,7 @@ import './../App.css';
 import turtle from './../assets/turtle.jpg'
 import algaeHeader from "./../assets/algaeheader.png"
 import { Grid } from '@mui/material';
-import recycling from "./../assets/recycling.jpg"
+import recycling from "./../assets/trash.png"
 
 
 export default function Methods() {
