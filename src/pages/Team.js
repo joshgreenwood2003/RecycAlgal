@@ -74,7 +74,7 @@ Our CEO has a Bsc in Biological Sciences from Durham University and an MSc in Bi
 
                 <Grid item xs={8}>
                     <div style={{ padding: "20px" }}><h1 className="pageHeader" style={{ opacity: "1" }}>Joelle Harrison</h1>
-                    <h3 style={{ opacity: "1" }}>Chief Scientific Officer (CSO) (slay/girlboss)</h3>
+                    <h3 style={{ opacity: "1" }}>Chief Scientific Officer (CSO) (she/her)</h3>
                         <p className="pageText" style={{ fontSize: "calc(0.55vw + 15px)" , textAlign: "left", opacity: "1" }}>
                         Our CSO has a BSc in Biochemistry and Genetics from the University of Sheffield which was followed by an MSc in Algal Biotechnology and Bioeconomy at the University of the Highlands and the Islands. From there, Joelle went on to complete a PhD at the University of Madrid, where she worked alongside Federica Bertocchini, managing to identify enzymes in the wax worm insect which are capable of oxidising and degrading polyethylene both at room temperature and in aqueous conditions. Our CSO's extensive background in algal bioengineering and groundbreaking enzyme discoveries have undoubtedly played an essential part in getting RecycAlgal to where it is today.                             </p>
                     </div>
