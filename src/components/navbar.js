@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link, useNavigate } from 'react-router-dom';
 import AdbIcon from '@mui/icons-material/Adb';
-import logo from './../assets/logo800.png';
+import logo from './../assets/logo800.jpg';
 
 const ext = [["About us","/"],["Our mission","/mission"],["Our solution","/solution"],["Methods","/methods"],["Sustainability","/sustainability"],["Meet the team","/team"]]
 
